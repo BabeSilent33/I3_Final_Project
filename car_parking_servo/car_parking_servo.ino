@@ -54,8 +54,8 @@ delayMicroseconds(10);
 // Measure the response from the HC-SR04 Echo Pin
 long ultra_time = pulseIn (echopin, 1);
   // Determine distance from duration
-  // Use 343 metres per second as speed of sound
-cm =  ultra_time / 30 / 2; 
+  // Use 340 metres per second as speed of sound
+cm =  ultra_time * 34 / 2; //34cm/ms
 
 Serial.print("cm:");Serial.println(cm);
 
